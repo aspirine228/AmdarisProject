@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\netcoreapp3.1\GameTracker.Common.deps.json
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\netcoreapp3.1\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\netcoreapp3.1\GameTracker.Common.pdb
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\netcoreapp3.1\GameTracker.Common.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\netcoreapp3.1\GameTracker.Common.AssemblyInfo.cs
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\netcoreapp3.1\GameTracker.Common.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\netcoreapp3.1\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\netcoreapp3.1\GameTracker.Common.pdb
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\netcoreapp3.1\GameTracker.Common.csprojAssemblyReference.cache

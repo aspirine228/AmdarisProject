@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.csprojAssemblyReference.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.AssemblyInfo.cs
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Domain.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Rep.deps.json
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Rep.runtimeconfig.json
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Rep.runtimeconfig.dev.json
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Rep.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Rep.pdb
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Domain.pdb
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.csproj.CopyComplete
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.pdb
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.genruntimeconfig.cache

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+   
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameTracker.Common\GameTracker.Common.csproj" />
+    <ProjectReference Include="..\GameTracker.Domain\GameTracker.Domain.csproj" />
+    <ProjectReference Include="..\GameTracker.Rep\GameTracker.Rep.csproj" />
+  </ItemGroup>
+
+</Project>
