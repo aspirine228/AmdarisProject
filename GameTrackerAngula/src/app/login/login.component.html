@@ -1,0 +1,30 @@
+
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<br>
+<br> <br>
+<br>
+<div id="container" class="container">
+  <div class="grandParentContaniner">
+    <div class="parentContainer">
+      <form novalidate class="loginForm" [formGroup]="userLoginForm" (ngSubmit)="login()" >
+        <div>
+         
+              <div class="login">
+  <div class="login-header">
+    <br>    <br>
+  </div>
+  <div class="login-form">
+    <h3>Username:</h3>
+    <input matInput type="text" placeholder="User Name" formControlName="userName" /><br>
+    <h3>Password:</h3>
+    <input matInput type="password" placeholder="Password" formControlName="password" />
+    <br> 
+    <button mat-raised-button>Login</button>    <a routerLink="../register">   Register</a>  
+       
+  </div>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

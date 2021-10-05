@@ -1,0 +1,348 @@
+
+<div id="preloder">
+    <div class="loader"></div>
+    </div>
+    
+    <header class="header-section">
+    <div class="container">
+    
+    <a class="site-logo" href="#">
+    <img src="assets/img/logo.png" alt="">
+    </a>
+    <div *ngIf="!bool" class="user-panel">
+    <a  routerLink="../login">Login</a> / <a routerLink="../register">Register</a>
+    </div>
+    <div *ngIf="bool" class="user-panel">
+        <a  routerLink="../admin">{{username}}</a>
+        </div>
+    
+    <div class="nav-switch">
+    <i class="fa fa-bars"></i>
+    </div>
+    
+    <nav class="main-menu">
+    <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a routerLink="/admin">DashBoard</a></li>
+    <li><a href="/registercompany">Company</a></li>
+    </ul>
+    </nav>
+    </div>
+    </header>
+    
+
+    <div class="latest-news-section">
+    <div class="ln-title">Latest Games</div>
+    <div class="news-ticker">
+    <div class="news-ticker-contant">
+    
+    <!-- <tr *ngFor="let game of gamelist">
+        <div class="nt-item">
+       <span class="new">{{game.timePlayed}}</span>
+       
+        </div>
+    </tr> -->
+
+    <div class="nt-item"><span class="strategy">{{gamelist[length-1].scenario}}</span>{{gamelist[length-1].prize}} MDL </div> 
+    <div class="nt-item"><span class="racing">{{gamelist[length-2].scenario}}</span>{{gamelist[length-2].prize}} MDL</div> 
+    <div class="nt-item"><span class="new">{{gamelist[length-3].scenario}}</span>{{gamelist[length-3].prize}} MDL</div> 
+    
+
+    </div>
+    </div>
+    </div>
+    
+    
+    <section class="feature-section spad">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-md-6 p-0">
+    <div class="feature-item set-bg" data-setbg="assets/img/features/1.jpg">
+    <span class="cata adventure">Users</span>
+    <div class="fi-content text-white">
+    <h5><a href="#">Personal Page</a></h5>
+    <p>Each User can see his personal Profile with wallet , when did he played and how much did he win.</p>
+    <a href="#" class="fi-comment">3 Comments</a>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 p-0">
+    <div class="feature-item set-bg" data-setbg="assets/img/features/2.jpg">
+    <span class="cata strategy">Companies</span>
+    <div class="fi-content text-white">
+    <h5><a href="#">Company Page</a></h5>
+    <p>Company who uses our application has it's own Manager Page, where they moderate and control games and payments. </p>
+    <a href="#" class="fi-comment">3 Comments</a>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 p-0">
+    <div class="feature-item set-bg" data-setbg="assets/img/features/3.jpg">
+    <span class="cata new">Open Source</span>
+    <div class="fi-content text-white">
+    <h5><a href="#">Clean and Honest System</a></h5>
+    <p>Our application is build on full random without intervention of any casino systems. On the webpage you can find and download test-version of app with transparent cells. On Git you can find source code. </p>
+    <a href="#" class="fi-comment">3 Comments</a>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 p-0">
+    <div class="feature-item set-bg" data-setbg="assets/img/features/4.jpg">
+    <span class="cata racing">Personal Statistic</span>
+    <div class="fi-content text-white">
+    <h5><a href="#">No needs in calculating</a></h5>
+    <p>We offer for users and companies comfortable collecting , sorting and filtering their statistics . For Users - to control their wallet. For Companies - to control their profit.</p>
+    <a href="#" class="fi-comment">3 Comments</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <section class="recent-game-section spad set-bg" data-setbg="assets/img/recent-game-bg.png">
+    <div class="container">
+    <div class="section-title">
+    <div class="cata new">new</div>
+    <h2>Recent Updates</h2>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 col-md-6">
+    <div class="recent-game-item">
+    <div class="rgi-thumb set-bg" data-setbg="assets/img/recent-game/1.jpg">
+    <div class="cata new">new</div>
+    </div>
+    <div class="rgi-content">
+    <h5>{{newsList[newsList.length-1].title}}</h5>
+    <p>{{newsList[newsList.length-1].text}} </p>
+    <a href="#" class="comment">3 Comments</a>
+    <div class="rgi-extra">
+    <div class="rgi-star"><img src="assets/img/icons/star.png" alt=""></div>
+    <div class="rgi-heart"><img src="assets/img/icons/heart.png" alt=""></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <div class="recent-game-item">
+    <div class="rgi-thumb set-bg" data-setbg="assets/img/recent-game/2.jpg">
+    <div class="cata racing">in progress</div>
+    </div>
+    <div class="rgi-content">
+    <h5>Personal DashBoard</h5>
+    <p>Companies and Users have it's own dashboard , but all features are not implemented yet. </p>
+    <a href="#" class="comment">3 Comments</a>
+    <div class="rgi-extra">
+    <div class="rgi-star"><img src="assets/img/icons/star.png" alt=""></div>
+    <div class="rgi-heart"><img src="assets/img/icons/heart.png" alt=""></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <div class="recent-game-item">
+    <div class="rgi-thumb set-bg" data-setbg="assets/img/recent-game/3.jpg">
+    <div class="cata adventure">Future</div>
+    </div>
+    <div class="rgi-content">
+    <h5>Tutorial page</h5>
+    <p>We want to add a source link to a trial version of our game with Tutorial page - how to play in it.</p>
+    <a href="#" class="comment">3 Comments</a>
+    <div class="rgi-extra">
+    <div class="rgi-star"><img src="assets/img/icons/star.png" alt=""></div>
+    <div class="rgi-heart"><img src="assets/img/icons/heart.png" alt=""></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <section class="tournaments-section spad">
+    <div class="container">
+    <div class="tournament-title">Special Thanks</div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="tournament-item mb-4 mb-lg-0">
+    <div class="ti-notic">My Mentor</div>
+    <div class="ti-content">
+    <div class="ti-thumb set-bg" data-setbg="assets/img/tournament/1.jpg"></div>
+    <div class="ti-text">
+    <h4>Vladislav Teriohin</h4>
+    <ul>
+    <li><span>Tournament Beggins:</span> June 20, 2018</li>
+    <li><span>Tounament Ends:</span> July 01, 2018</li>
+    <li><span>Participants:</span> 10 teams</li>
+    <li><span>Tournament Author:</span> Admin</li>
+    </ul>
+    <p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="tournament-item">
+    <div class="ti-notic">Premium Tournament</div>
+    <div class="ti-content">
+    <div class="ti-thumb set-bg" data-setbg="assets/img/tournament/2.jpg"></div>
+    <div class="ti-text">
+    <h4>DOOM</h4>
+    <ul>
+    <li><span>Tournament Beggins:</span> June 20, 2018</li>
+    <li><span>Tounament Ends:</span> July 01, 2018</li>
+    <li><span>Participants:</span> 10 teams</li>
+    <li><span>Tournament Author:</span> Admin</li>
+    </ul>
+    <p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <section class="review-section spad set-bg" data-setbg="assets/img/review-bg.png">
+    <div class="container">
+    <div class="section-title">
+    <div class="cata new">new</div>
+    <h2>Recent FeedBacks</h2>
+    </div>
+    <div class="row">
+    <div class="col-lg-3 col-md-6">
+    <div class="review-item">
+    <div class="review-cover set-bg" data-setbg="assets/img/review/1.jpg">
+    <div class="score yellow">{{feedBackList[feedBackList.length-1].grade}}</div>
+    </div>
+    <div class="review-text">
+    <h5>{{feedBackList[feedBackList.length-1].userName}}</h5>
+    <p>{{feedBackList[feedBackList.length-1].text}}</p>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+    <div class="review-item">
+    <div class="review-cover set-bg" data-setbg="assets/img/review/2.jpg">
+    <div class="score purple">{{feedBackList[feedBackList.length-2].grade}}</div>
+    </div>
+    <div class="review-text">
+    <h5>{{feedBackList[feedBackList.length-2].userName}}</h5>
+    <p>{{feedBackList[feedBackList.length-2].text}}</p>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+    <div class="review-item">
+    <div class="review-cover set-bg" data-setbg="assets/img/review/3.jpg">
+    <div class="score green">{{feedBackList[feedBackList.length-3].grade}}</div>
+    </div>
+    <div class="review-text">
+    <h5>{{feedBackList[feedBackList.length-3].userName}}</h5>
+    <p>{{feedBackList[feedBackList.length-3].text}}.</p>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+    <div class="review-item">
+    <div class="review-cover set-bg" data-setbg="assets/img/review/4.jpg">
+    <div class="score pink">9.7</div>
+    </div>
+    <div class="review-text">
+    <h5>GTA</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <section class="footer-top-section">
+    <div class="container">
+    <div class="footer-top-bg">
+    <img src="assets/img/footer-top-bg.png" alt="">
+    </div>
+    <div class="row">
+    <div class="col-lg-4">
+    <div class="footer-logo text-white">
+    <img src="assets/img/footer-logo.png" alt="">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <div class="footer-widget mb-5 mb-md-0">
+    <h4 class="fw-title">Latest Posts</h4>
+    <div class="latest-blog">
+    <div class="lb-item">
+    <div class="lb-thumb set-bg" data-setbg="assets/img/latest-blog/1.jpg"></div>
+    <div class="lb-content">
+    <div class="lb-date">June 21, 2018</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+    <a href="#" class="lb-author">By Admin</a>
+    </div>
+    </div>
+    <div class="lb-item">
+    <div class="lb-thumb set-bg" data-setbg="assets/img/latest-blog/2.jpg"></div>
+    <div class="lb-content">
+    <div class="lb-date">June 21, 2018</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+    <a href="#" class="lb-author">By Admin</a>
+    </div>
+    </div>
+    <div class="lb-item">
+    <div class="lb-thumb set-bg" data-setbg="assets/img/latest-blog/3.jpg"></div>
+    <div class="lb-content">
+    <div class="lb-date">June 21, 2018</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+    <a href="#" class="lb-author">By Admin</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <div class="footer-widget">
+    <h4 class="fw-title">Top Comments</h4>
+    <div class="top-comment">
+    <div class="tc-item">
+    <div class="tc-thumb set-bg" data-setbg="assets/img/authors/1.jpg"></div>
+    <div class="tc-content">
+    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+    <div class="tc-date">June 21, 2018</div>
+    </div>
+    </div>
+    <div class="tc-item">
+    <div class="tc-thumb set-bg" data-setbg="assets/img/authors/2.jpg"></div>
+    <div class="tc-content">
+    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+    <div class="tc-date">June 21, 2018</div>
+    </div>
+    </div>
+    <div class="tc-item">
+    <div class="tc-thumb set-bg" data-setbg="assets/img/authors/3.jpg"></div>
+    <div class="tc-content">
+    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+    <div class="tc-date">June 21, 2018</div>
+    </div>
+    </div>
+    <div class="tc-item">
+    <div class="tc-thumb set-bg" data-setbg="assets/img/authors/4.jpg"></div>
+    <div class="tc-content">
+    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+    <div class="tc-date">June 21, 2018</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+  

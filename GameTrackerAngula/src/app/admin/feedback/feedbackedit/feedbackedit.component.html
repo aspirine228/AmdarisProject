@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title class="view-card-title">
+        <h1>{{pageTitle}}</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <form novalidate [formGroup]="feedBackForm" (ngSubmit)="saveFeedBack()">
+      <mat-toolbar style="background-color: #FFF">
+        <mat-toolbar-row>
+          <span class="title-spacer"></span>
+  
+          <mat-card-actions>
+            <button mat-mini-fab class="primary" style="margin-right:10px; background-color:darkgray" type="submit" [disabled]='!feedBackForm.valid' >
+              <mat-icon>save</mat-icon>
+            </button>
+            <button mat-mini-fab class="" style="margin-right:10px; " [routerLink]="['/admin/books']">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-card-actions>
+  
+        </mat-toolbar-row>
+      </mat-toolbar>
+  
+      <mat-card-content >
+        <div class="form-card">
+          
+          <mat-form-field class="form-field-90">
+            <textarea matInput placeholder="Text" type="text" placeholder="Text. (required)" formControlName="text"></textarea>
+          </mat-form-field>
+     
+  
+          <mat-form-field class="form-field-30">
+            <input matInput placeholder="Grade"  type="number" placeholder="Grade (required)" formControlName="grade"/>
+          </mat-form-field>
+  
+
+        </div>
+      </mat-card-content>
+    </form>
+  </mat-card>

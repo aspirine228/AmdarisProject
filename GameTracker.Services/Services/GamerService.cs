@@ -1,15 +1,13 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Text;
 using GameTracker.Services.Interfaces;
 using GameTracker.Rep.Interfaces;
 using GameTracker.Domain.Entities;
 using AutoMapper;
 using System.Threading.Tasks;
 using GameTracker.Common.Dtos.Gamer;
-using GameTracker.Common.Models;
 using System.Linq;
-using Microsoft.Data.SqlClient;
+
 
 namespace GameTracker.Services.Services
 {
@@ -23,37 +21,35 @@ namespace GameTracker.Services.Services
             _repository = repository;
             _mapper = mapper;
         }
+
         public async Task<GamerDto> GetGamerById(int id)
         {
             var gamer = await _repository.GetById(id);
             var gamerDto = _mapper.Map<GamerDto>(gamer);
             return gamerDto;
         }
-        public IList<Gamer> GetGamers(FilterOptions filterOptions)
+
+        public IList<GamerDto> GetGamers()
         {
-            IQueryable<Gamer> gamers;
+            List<GamerDto> gamersDto = new List<GamerDto>();
 
-            if (!string.IsNullOrWhiteSpace(filterOptions.SearchTerm))
+            var gamers = _repository.GetAll();
+            foreach (var gamer in gamers)
             {
-                gamers = _repository.FindAll(e => e.Name.Contains(filterOptions.SearchTerm));
-            }
-            else
-            {
-                gamers = null;
+                var gamerDto = _mapper.Map<GamerDto>(gamer);
+                gamersDto.Add(gamerDto);
             }
 
-            switch (filterOptions.Order)
-            {
-                case SortOrder.Ascending:
-                    gamers = gamers.OrderBy(e => e.Name);
-                    break;
-                case SortOrder.Descending:
-                    gamers = gamers.OrderByDescending(e => e.Name);
-                    break;
-            }
-
-            return gamers.ToList();
+            return gamersDto;
         }
+
+        public Gamer GetGamerByPhone(string phoneNumber)
+        {
+            var gamer = _repository.GetAll().Where(e => e.PhoneNumber == phoneNumber).FirstOrDefault();
+
+            return gamer;
+        }
+
         public async Task<GamerDto> CreateGamer(GamerCreateDto dto)
         {
             var gamer = _mapper.Map<Gamer>(dto);
@@ -62,12 +58,33 @@ namespace GameTracker.Services.Services
             var gamerDto = _mapper.Map<GamerDto>(gamer);
             return gamerDto;
         }
+
+        public async Task<IList<GamerDto>> GetGamersByCompanyId(int id)
+        {
+            var gamers = await _repository.GetAllWithInclude(gamers=>gamers.Games);
+
+            var gomers = gamers.Where(g => g.Games.Any() == g.Games.Where(h => h.CompanyId == id).Any()).ToList();
+            List<GamerDto> gamersDto = new List<GamerDto>();
+
+          
+            foreach (var gamer in gomers)
+            {
+                var gamerDto = _mapper.Map<GamerDto>(gamer);
+                gamersDto.Add(gamerDto);
+            }
+
+            return gamersDto;
+            
+        }
+
         public async Task UpdateGamer(int id,GamerCreateDto dto)
         {
             var gamer = await _repository.GetById(id);
             _mapper.Map(dto, gamer);
             await _repository.SaveChangesAsync();
+            
         }
+
         public async Task DeleteGamer(int id)
         {
             await _repository.Remove(id);

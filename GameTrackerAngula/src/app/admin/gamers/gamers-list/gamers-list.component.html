@@ -1,0 +1,55 @@
+<mat-card class='light' style="height: 100%;">
+    <mat-card-header>
+      <mat-card-title class="view-card-title">
+        <h1>Gamers</h1>
+      </mat-card-title>
+    </mat-card-header>
+  <div class="mat-elevation-z8">
+    <table style="width: 100%;" mat-table [dataSource]="gamerlist">
+     
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef > ID </th>
+            <td mat-cell *matCellDef="let gamer"> {{gamer.id}} </td>
+          </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="gamesPlayed">
+        <th mat-header-cell *matHeaderCellDef > Played </th>
+        <td mat-cell *matCellDef="let gamer"> {{gamer.gamesPlayed}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="wallet">
+        <th mat-header-cell *matHeaderCellDef > Wallet </th>
+        <td mat-cell *matCellDef="let gamer"> {{gamer.wallet}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="phoneNumber">
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="let gamer"> {{gamer.phoneNumber}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let gamer"> {{gamer.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let gamer"> {{gamer.email}} </td>
+      </ng-container>
+   
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator
+    [length]="3"
+     [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons 
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  
+  </mat-card>
+  

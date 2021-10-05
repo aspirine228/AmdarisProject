@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\net5.0\GameTracker.Common.deps.json
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\net5.0\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\net5.0\ref\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\bin\Debug\net5.0\GameTracker.Common.pdb
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.csprojAssemblyReference.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.AssemblyInfo.cs
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\ref\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Common\obj\Debug\net5.0\GameTracker.Common.pdb

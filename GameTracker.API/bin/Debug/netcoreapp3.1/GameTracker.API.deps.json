@@ -1491,6 +1491,7 @@
       "GameTracker.Rep/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
+          "GameTracker.Common": "1.0.0",
           "GameTracker.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",

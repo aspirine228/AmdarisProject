@@ -1,0 +1,75 @@
+<mat-tab-group>
+    <mat-tab label="Create"> 
+<mat-card style="width: 500px; margin: auto;">
+    <h2 style="text-align: center;">Your FeedBack</h2>
+    <mat-card-content>
+        <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+           
+            <div class="form-group">          
+                <mat-form-field style="display: block">
+                    <textarea style="height: 300px;" matInput type="text" placeholder="Your FeedBack text" formControlName="text"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.text.errors }"></textarea> 
+                    <div *ngIf="submitted && f.text.errors" class="invalid-feedback">
+                        <div *ngIf="f.text.errors.required">Full Name is required</div>
+                    </div>
+                  </mat-form-field>   
+            </div>
+            <div class="form-group">
+
+                <mat-form-field style="display: block">
+                    <input matInput type="number" placeholder="Yout Grade #/10" formControlName="grade"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.grade.errors }" />
+                    <div *ngIf="submitted && f.grade.errors" class="invalid-feedback">
+                        <div *ngIf="f.grade.errors.required">Username is required</div>
+                    </div>
+                  </mat-form-field>
+            </div>
+         
+           
+            <div class="form-group">
+               <button mat-raised-button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Submit
+                </button>
+                <button mat-button>  <a routerLink="../admin" class="btn btn-link">Cancel</a> </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+ </mat-tab>
+<mat-tab label="Update/Delete"> <mat-table #table [dataSource]="feedBackList" matSort matSortActive="id" matSortDirection="asc">
+     
+    <ng-container matColumnDef="userName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
+    <mat-cell *matCellDef="let feedBack"> {{feedBack.userName}} </mat-cell>
+  </ng-container>
+
+  <ng-container style="width: 300px;" matColumnDef="text">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Text </mat-header-cell>
+    <mat-cell *matCellDef="let feedBack"> {{feedBack.text}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="grade">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Grade </mat-header-cell>
+    <mat-cell *matCellDef="let feedBack"> {{feedBack.grade}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef style="justify-content:right;">
+      <button mat-button style="color:white; background-color:darkgrey">Reset</button>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let feedBack" style="justify-content:right;">
+      <button mat-mini-fab style="background-color:teal; min-height: 30px;   margin: 5px;" [routerLink]="['/admin/feedbackedit', feedBack.id]">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-mini-fab style="background-color:lightblue; min-height: 30px;  margin: 5px;" (click)="openDialogForDeleting(feedBack.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+ 
+  
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table></mat-tab>
+
+</mat-tab-group>

@@ -1,48 +1,26 @@
-﻿using Microsoft.AspNetCore;
+﻿using GameTracker.API.Extensions;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using Microsoft.Extensions.Hosting;
 using System.Threading.Tasks;
 
 namespace GameTracker.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
 
-            //var webHost = new WebHostBuilder()
-            //    .UseKestrel()
-            //    .UseContentRoot(Directory.GetCurrentDirectory())
-            //    .ConfigureAppConfiguration((hostingContext, config) =>
-            //    {
-            //        var env = hostingContext.HostingEnvironment;
-            //        config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            //        .AddJsonFile($"appsettings.{env.EnvironmentName}.json",
-            //        optional: true, reloadOnChange: true);
-            //        config.AddEnvironmentVariables();
-            //    }
-            //    ).ConfigureLogging((hostingContext, logging) =>
-            //    {
-            //        logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
-            //        logging.AddConsole();
-            //        logging.AddDebug();
-            //        logging.AddEventSourceLogger();
-            //    }
-                
-                
-            //    ).UseStartup<Startup>()
-            //    .Build();
-            //webHost.Run();
+            IHost host = CreateHostBuilder(args).Build();
+           
+            await host.SeedData();
+            await host.RunAsync();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+             Host.CreateDefaultBuilder(args)
+                 .ConfigureWebHostDefaults(webBuilder =>
+                 {
+                     webBuilder.UseStartup<Startup>();
+                 });
     }
 }

@@ -1,0 +1,193 @@
+<mat-tab-group>
+    <mat-tab label="Me"> 
+       
+                      
+<div  class="container">
+    <div class="main-body">
+      
+         
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="assets/img/363640-200.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                        <h2 class="media-heading">{{userDetails.userName}} <small>#{{userDetails.id}}</small></h2>
+                        
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">	<mat-icon>face</mat-icon> Full Name</h6>
+                    </div>
+                    <div id="name" class="col-sm-9 text-secondary">
+                    {{userGamerDetails?.name}}
+                    </div>
+                   
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0"><mat-icon>alternate_email</mat-icon> Email</h6>
+                    </div>
+                    <div id="email" class="col-sm-9 text-secondary">
+                      {{userGamerDetails?.email}}
+                    </div>
+                   
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0"><mat-icon>videogame_asset</mat-icon> Games Played</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{userGamerDetails?.gamesPlayed}}
+                    </div>
+                    
+                  </div>
+                  
+                  <hr>
+                  
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0"><mat-icon> call</mat-icon> Mobile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{userGamerDetails?.phoneNumber}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0"><mat-icon>account_balance_wallet</mat-icon> Wallet</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{userGamerDetails?.wallet}}
+                    </div>
+                  </div>
+                  <hr>
+                
+                </div>
+              </div>
+
+                        
+            </div>
+          </div>
+
+        </div>
+    </div>
+                    
+        
+    </mat-tab>
+
+    <mat-tab label="Edit">  
+      <h2>Edit Your Profile</h2>
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"> <label for="name"><mat-icon>face</mat-icon> Full Name</label></h6>
+              </div>
+              <div id="name" class="col-sm-9 text-secondary">
+                <div class="form-group">
+                
+                  <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                  <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required">First Name is required</div>
+                  </div>
+              </div>
+              </div>
+             
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"> <label for="email"><mat-icon>alternate_email</mat-icon> Email</label></h6>
+              </div>
+              <div id="email" class="col-sm-9 text-secondary">
+                <div class="form-group">
+                  
+                  <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Last Name is required</div>
+                  </div>
+              </div>
+              </div>
+             
+            </div>
+          
+           
+            
+            <hr>
+            
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"> <label for="phoneNumber"><mat-icon> call</mat-icon> Phone</label></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <div class="form-group">
+                  
+                  <input type="text" formControlName="phoneNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+                  <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                      <div *ngIf="f.phoneNumber.errors.required">Username is required</div>
+                  </div>
+              </div>
+              </div>
+            </div>
+        
+            
+          
+          </div>
+        </div>
+
+                  
+      </div>
+      
+    <div class="form-group">
+      <button  [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Edit
+      </button>
+      
+  </div>
+</form>
+   
+    
+    </mat-tab>
+    <mat-tab label="Delete"> 
+        
+<mat-card class="example-card">
+      <button class="buttons"  onclick="document.getElementById('id01').style.display='block'">Delete Account</button>
+
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+        <form class="modal-content" action="/home">
+          <div class="container">
+            <h1>Delete Account</h1>
+            <p>Are you sure you want to delete your account?</p>
+      
+            <div class="clearfix">
+              <button  type="buttons" class="buttons" style=" background-color: #ccc;
+              color: black;">Cancel</button>
+              <button type="buttons" class="buttons" style=" background-color: #f44336;" (click)="deleteUser()">Delete</button>
+            </div>
+          </div>
+        </form>
+      </div>
+</mat-card>
+    </mat-tab>
+  </mat-tab-group>

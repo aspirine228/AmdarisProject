@@ -32,8 +32,6 @@ C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\r
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -118,8 +116,6 @@ C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\r
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -432,3 +428,12 @@ C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\obj\Debug\net5.0\G
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\obj\Debug\net5.0\ref\GameTracker.InterTests.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\obj\Debug\net5.0\GameTracker.InterTests.pdb
 C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\obj\Debug\net5.0\GameTracker.InterTests.genruntimeconfig.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Moq.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.InterTests\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll

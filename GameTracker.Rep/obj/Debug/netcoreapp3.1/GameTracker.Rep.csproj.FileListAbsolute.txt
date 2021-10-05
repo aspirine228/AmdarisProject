@@ -13,3 +13,5 @@ C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\G
 C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.dll
 C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.pdb
 C:\Users\User\source\repos\GameTracker\GameTracker.Rep\obj\Debug\netcoreapp3.1\GameTracker.Rep.genruntimeconfig.cache
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Common.dll
+C:\Users\User\source\repos\GameTracker\GameTracker.Rep\bin\Debug\netcoreapp3.1\GameTracker.Common.pdb

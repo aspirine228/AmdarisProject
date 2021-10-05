@@ -2,17 +2,15 @@
 
 namespace GameTracker.Domain.Entities
 {
-    public class  Gamer:User
+    public class  Gamer:Users
     {
 
         public int GamesPlayed { get; set; }
         public int Wallet { get; set; }
         public string PhoneNumber { get; set; }
-       // public virtual ICollection<Device> Devices { get; set; }
-        public virtual ICollection<Game> Games { get; set; }
+        public  ICollection<Game> Games { get; set; }
 
-        //public int CompanyId { get; set; }
-        //public ICollection<Company> Companies { get; set; }
+        
         public Gamer CreateDeffault()
         {
             Gamer gamer = new Gamer();

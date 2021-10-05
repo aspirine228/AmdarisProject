@@ -1,6 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace GameTracker.Domain.Entities
 {
@@ -8,7 +8,8 @@ namespace GameTracker.Domain.Entities
     {
         public string CompanyName { get; set; }
 
-        public int GamerId { get; set; }
-        public ICollection<Gamer> Gamers { get; set; }
+        public  CompanyContract CompanyContract { get; set; }
+
+        public  ICollection<Game> Games { get; set; }
     }
 }
