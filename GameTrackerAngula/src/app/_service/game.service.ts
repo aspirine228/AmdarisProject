@@ -5,6 +5,7 @@ import { Game } from '../_models/Game/game';
 import { Observable } from 'rxjs';
 import { PagedResult } from '../_infrastructure/models/PagedResult';
 import { PaginatedRequest } from '../_infrastructure/models/PaginatedRequest';
+import { gamelist } from '../_models/Game/gameList';
 
 @Injectable({
   providedIn: 'root'
@@ -36,20 +37,12 @@ export class GameService {
   }
 
 
-  getGameWithId(id:number):Observable<Game> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
-    return this.http.get<Game>(this.baseUrl + 'games/'+id);
-
-  }
   GetGames2(){
     this.http.get(this.baseUrl+'games').toPromise().then(res=>this.list=res as Game[]);
   }
 
-  getGamesPaged(paginatedRequest: PaginatedRequest): Observable<PagedResult<Game>> {
-    return this.http.post<PagedResult<Game>>(this.baseUrl + 'games/paginated-search', paginatedRequest);
+  getGamesPaged(paginatedRequest: PaginatedRequest): Observable<PagedResult<gamelist>> {
+    this.getOptions();
+    return this.http.post<PagedResult<gamelist>>(this.baseUrl + 'games/paginated-search', paginatedRequest,this.httpOptions);
   }
 }

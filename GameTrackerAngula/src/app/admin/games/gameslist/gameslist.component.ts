@@ -16,7 +16,7 @@ import { TableColumn } from 'src/app/_infrastructure/models/TableColumn';
 import { RequestFilters } from 'src/app/_infrastructure/models/RequestFilters';
 import { FilterLogicalOperators } from 'src/app/_infrastructure/models/FilterLogicalOperators';
 import { AdminComponent } from '../../admin/admin.component';
-
+import { gamelist } from 'src/app/_models/Game/gameList';
 
 @Component({
   selector: 'app-gameslist',
@@ -24,16 +24,17 @@ import { AdminComponent } from '../../admin/admin.component';
   styleUrls: ['./gameslist.component.css']
 })
 export class GameslistComponent implements OnInit {
-  pagedGames!: PagedResult<Game>;
+  pagedGames!: PagedResult<gamelist>;
   testGame!:Game;
   public gameForm!:FormGroup;
   tableColumns: TableColumn[] = [
     { name: 'timePlayed', index: 'timePlayed', displayName: 'When' },
-    { name: 'phoneNumber', index: 'phoneNumber', displayName: 'Phone', useInSearch: true },
+    { name: "phoneNumber", index: "phoneNumber", displayName: 'phoneNumber', useInSearch: true },
     { name: 'try1', index: 'try1', displayName: 'Fist Try' },
     { name: 'try2', index: 'try2', displayName: 'Second Try' },
     { name: 'scenario', index: 'scenario', displayName: 'Scenario' },
-    { name: 'prize', index: 'prize', displayName: 'Prize' }
+    { name: 'prize', index: 'prize', displayName: 'prize'},
+
   ];
 
   displayedColumns!: string[];
@@ -56,18 +57,16 @@ export class GameslistComponent implements OnInit {
     ) {
       this.displayedColumns=this.tableColumns.map(column=>column.name);
       this.filterForm=this.formBuilder.group({
-        timePlayed:[Date],
-        phoneNumber:[''],
-        try1:[0],
-        try2:[0],
-        scenario:[''],
-        prize:[''],
+        
+        phoneNumber:[""],
+       
+        
       });
       
      }
 
      ngOnInit() {
-     
+     // this.loadGamesFromApiPaged();
     if(this.admin.roleName=='admin')
     {
     this.loadGamesFromApi();
@@ -94,7 +93,7 @@ export class GameslistComponent implements OnInit {
   loadGamesFromApiPaged() {
     const paginatedRequest = new PaginatedRequest(this.paginator, this.sort, this.requestFilters);
     this.gameService.getGamesPaged(paginatedRequest)
-      .subscribe((pagedGames: PagedResult<Game>) => {
+      .subscribe((pagedGames: PagedResult<gamelist>) => {
         this.pagedGames = pagedGames ;
       });
   }

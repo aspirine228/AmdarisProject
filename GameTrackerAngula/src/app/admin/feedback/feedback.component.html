@@ -1,13 +1,13 @@
 <mat-tab-group>
     <mat-tab label="Create"> 
-<mat-card style="width: 500px; margin: auto;">
+<mat-card style="width: 500px; height: 600px; margin: auto; margin-top: 40px; margin-bottom: 10px;">
     <h2 style="text-align: center;">Your FeedBack</h2>
     <mat-card-content>
         <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
            
             <div class="form-group">          
                 <mat-form-field style="display: block">
-                    <textarea style="height: 300px;" matInput type="text" placeholder="Your FeedBack text" formControlName="text"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.text.errors }"></textarea> 
+                    <textarea style="height: 230px;" matInput type="text" placeholder="Your FeedBack text" formControlName="text"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.text.errors }"></textarea> 
                     <div *ngIf="submitted && f.text.errors" class="invalid-feedback">
                         <div *ngIf="f.text.errors.required">Full Name is required</div>
                     </div>
@@ -35,7 +35,11 @@
     </mat-card-content>
 </mat-card>
  </mat-tab>
-<mat-tab label="Update/Delete"> <mat-table #table [dataSource]="feedBackList" matSort matSortActive="id" matSortDirection="asc">
+<mat-tab  label="Update/Delete"> 
+  <mat-card style="width: 500px; margin: auto;">
+    <h2 style="text-align: center;">NEWS</h2>
+    <mat-card-content>
+  <mat-table  #table [dataSource]="feedBackList" matSort matSortActive="id" matSortDirection="asc">
      
     <ng-container matColumnDef="userName">
     <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
@@ -70,6 +74,7 @@
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
-</mat-table></mat-tab>
+</mat-table>  </mat-card-content>
+</mat-card></mat-tab>
 
 </mat-tab-group>

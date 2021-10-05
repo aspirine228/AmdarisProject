@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using GameTracker.Services.Interfaces;
 using GameTracker.Common.Dtos.Gamer;
 using GameTracker.API.Exeptions;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace GameTracker.API.Controllers
 {
@@ -37,7 +37,7 @@ namespace GameTracker.API.Controllers
             return gamerDto;
         }
 
-        
+        [AllowAnonymous]
         [HttpGet("gamer/{phoneNumber}")]
         public async Task<GamerDto> GetGamerByPhoneNumber(string phoneNumber)
         {

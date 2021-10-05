@@ -5,51 +5,52 @@
       <h1>Games</h1>
     </mat-card-title>
   </mat-card-header>
+  
 <div class="mat-elevation-z8">
-  <table style="width: 100%;" mat-table [dataSource]="gamelist">
+  <mat-table #table [dataSource]="gamelist">
 
     <!-- Position Column -->
     <ng-container matColumnDef="timePlayed">
-      <th mat-header-cell *matHeaderCellDef > When </th>
-      <td mat-cell *matCellDef="let game"> {{game.timePlayed}} </td>
+      <mat-header-cell *matHeaderCellDef > When </mat-header-cell>
+      <mat-cell *matCellDef="let game"> {{game.timePlayed}} </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="phoneNumber">
-      <th mat-header-cell *matHeaderCellDef > Phone </th>
-      <td mat-cell *matCellDef="let game"> {{game.phoneNumber}} </td>
+      <mat-header-cell *matHeaderCellDef  > Phone </mat-header-cell>
+      <mat-cell  *matCellDef="let game"> {{game.phoneNumber}} </mat-cell>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="try1">
-      <th mat-header-cell *matHeaderCellDef> First Try </th>
-      <td mat-cell *matCellDef="let game"> {{game.try1}} </td>
+      <mat-header-cell *matHeaderCellDef> First Try </mat-header-cell>
+      <mat-cell *matCellDef="let game"> {{game.try1}} </mat-cell>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="try2">
-      <th mat-header-cell *matHeaderCellDef> Second Try </th>
-      <td mat-cell *matCellDef="let game"> {{game.try2}} </td>
+      <mat-header-cell *matHeaderCellDef> Second Try </mat-header-cell>
+      <mat-cell *matCellDef="let game"> {{game.try2}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="scenario">
-      <th mat-header-cell *matHeaderCellDef> Scenario </th>
-      <td mat-cell *matCellDef="let game"> {{game.scenario}} </td>
+      <mat-header-cell *matHeaderCellDef> Scenario </mat-header-cell>
+      <mat-cell *matCellDef="let game"> {{game.scenario}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="prize">
-      <th mat-header-cell *matHeaderCellDef> Prize </th>
-      <td mat-cell *matCellDef="let game"> {{game.prize}} </td>
+      <mat-header-cell *matHeaderCellDef> Prize </mat-header-cell>
+      <mat-cell *matCellDef="let game"> {{game.prize}} </mat-cell>
     </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
 
   <mat-paginator
-  [length]="3"
+  [length]="gamelist.length"
    [pageSizeOptions]="[5, 10, 20]"
+   pageSize="5"
                  showFirstLastButtons 
                  aria-label="Select page of periodic elements">
   </mat-paginator>
 </div>
 
 </mat-card>
-

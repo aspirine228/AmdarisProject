@@ -30,7 +30,7 @@ namespace GameTracker.API.Controllers
         }
 
         [HttpPost("paginated-search")]
-        public async Task<PaginatedResult<GameDto>> GetPagedGames(PagedRequest pagedRequest)
+        public async Task<PaginatedResult<GameListDto>> GetPagedGames(PagedRequest pagedRequest)
         {
             var games = await _gameService.GetPagedGames(pagedRequest);
             return games;
@@ -65,6 +65,7 @@ namespace GameTracker.API.Controllers
             return gameDto;
         }
 
+        
         [HttpGet("Company/{userName}")]
         public async Task<IList<GameDto>> GetGameByCompanyId(string userName)
         {

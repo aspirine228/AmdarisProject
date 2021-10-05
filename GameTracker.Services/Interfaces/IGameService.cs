@@ -11,7 +11,7 @@ namespace GameTracker.Services.Interfaces
 
         Task PostAGame(CreateGameDto dto);
         Task<IList<GameDto>> GetGames();
-        Task<PaginatedResult<GameDto>> GetPagedGames(PagedRequest pagedRequest);
+        Task<PaginatedResult<GameListDto>> GetPagedGames(PagedRequest pagedRequest);
         Task<IList<GameDto>> GetGameByGamerUserPhone(string phoneNumber);
         Task<IList<GameDto>> GetGameByCompanyUsername(string userName);
 

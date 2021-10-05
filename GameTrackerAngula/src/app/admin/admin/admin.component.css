@@ -32,12 +32,22 @@ a.active {
 .profile-card {
   padding-bottom: 5px;
 }
+.mat-card-title{
 
+color: white;
+
+
+}
 /* div.avatar {
   background-image: url("/assets/img/avatar0.png");
   background-size: cover;
 } */
+.mat-card{
+background-color: darkcyan;
+}
+.mat-sidenav-container{
 
+}
 .avatar {
   background-image: url("/assets/img/avatar0.png");
   background-size: cover;
@@ -46,7 +56,11 @@ a.active {
   height: 30px;
   border-radius: 50%;
 }
-
+.app-container{
+ 
+color: black;
+text-shadow: white;
+}
 .footer {
   max-height: 18px;
   right: 0;

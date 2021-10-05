@@ -53,9 +53,9 @@ namespace GameTracker.Services.Services
             return _list;
         }
 
-        public async Task<PaginatedResult<GameDto>> GetPagedGames(PagedRequest pagedRequest)
+        public async Task<PaginatedResult<GameListDto>> GetPagedGames(PagedRequest pagedRequest)
         {
-            var pagedGamesDto = await _repository.GetPagedData<Game, GameDto>(pagedRequest);
+            var pagedGamesDto = await _repository.GetPagedData<Game, GameListDto>(pagedRequest);
             return pagedGamesDto;
         }
 

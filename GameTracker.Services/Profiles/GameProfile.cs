@@ -18,7 +18,12 @@ namespace GameTracker.Services.Profiles
             CreateMap<CreateGameDto, Game>()
                 .ForMember(entity => entity.Stat, memberOptions => memberOptions.MapFrom(dto => dto));
             CreateMap<CreateGameDto, GameStat>();
-              
+            CreateMap<Game, GameListDto>()
+             .ForMember(x => x.phoneNumber, y => y.MapFrom(z => z.Stat.PhoneNumber))
+             .ForMember(x => x.prize, y => y.MapFrom(z => z.Stat.Prize))
+             .ForMember(x => x.Try1, y => y.MapFrom(z => z.Stat.Try1))
+             .ForMember(x => x.Try2, y => y.MapFrom(z => z.Stat.Try2))
+             .ForMember(x => x.Scenario, y => y.MapFrom(z => z.Stat.Scenario));
         }
     }
 }
