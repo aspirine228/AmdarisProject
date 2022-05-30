@@ -55,6 +55,7 @@ namespace GameTracker.API.Controllers
             return gameDto;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> CreateGamer(GamerCreateDto dto)
         {

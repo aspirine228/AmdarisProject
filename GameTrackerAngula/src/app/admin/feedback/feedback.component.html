@@ -1,6 +1,6 @@
 <mat-tab-group>
     <mat-tab label="Create"> 
-<mat-card style="width: 500px; height: 600px; margin: auto; margin-top: 40px; margin-bottom: 10px;">
+<mat-card style="width: 500px; height: 600px; margin: auto; margin-top: 40px; margin-bottom: 50px;">
     <h2 style="text-align: center;">Your FeedBack</h2>
     <mat-card-content>
         <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -35,9 +35,9 @@
     </mat-card-content>
 </mat-card>
  </mat-tab>
-<mat-tab  label="Update/Delete"> 
-  <mat-card style="width: 500px; margin: auto;">
-    <h2 style="text-align: center;">NEWS</h2>
+<mat-tab label="Update/Delete"> 
+  <mat-card style="width: 500px; margin: auto; margin-top: 50px; margin-bottom: 50px;">
+    <h2 style="text-align: center;">FEEDBACKS</h2>
     <mat-card-content>
   <mat-table  #table [dataSource]="feedBackList" matSort matSortActive="id" matSortDirection="asc">
      
@@ -57,7 +57,7 @@
   </ng-container>
 
   <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef style="justify-content:right;">
+    <mat-header-cell *matHeaderCellDef style="justify-content:left;">
       <button mat-button style="color:white; background-color:darkgrey">Reset</button>
     </mat-header-cell>
     <mat-cell *matCellDef="let feedBack" style="justify-content:right;">

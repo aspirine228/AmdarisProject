@@ -1,6 +1,6 @@
 <mat-tab-group>
     <mat-tab label="Create"> 
-<mat-card style="width: 500px; margin: auto;">
+<mat-card style="width: 500px; margin: auto; margin-top: 50px; margin-bottom: 50px;">
     <h2 style="text-align: center;">NEWS</h2>
     <mat-card-content>
         <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -50,10 +50,10 @@
 
 
   <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef style="justify-content:right;">
+    <mat-header-cell *matHeaderCellDef style="justify-content:left;">
       <button mat-button style="color:white; background-color:darkgrey">Reset</button>
     </mat-header-cell>
-    <mat-cell *matCellDef="let news" style="justify-content:right;">
+    <mat-cell *matCellDef="let news" style="justify-content:left;">
       <button mat-mini-fab style="background-color:teal; min-height: 30px;   margin: 5px;" [routerLink]="['/admin/newsedit', news.id]">
         <mat-icon>edit</mat-icon>
       </button>
